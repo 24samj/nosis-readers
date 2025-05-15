@@ -1,26 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* —— Darks (D50–D500) —— */
+  --color-dark-50: #ebe9e8; /* D50  */
+  --color-dark-75: #aba3a0; /* D75  */
+  --color-dark-100: #887d79; /* D100 */
+  --color-dark-200: #55453f; /* D200 */
+  --color-dark-300: #321f18; /* D300 */
+  --color-dark-400: #231611; /* D400 */
+  --color-dark-500: #1f130f; /* D500 */
+
+  /* —— Neutrals (N50–N500) —— */
+  --color-neutral-50: #fdfcfc; /* N50  */
+  --color-neutral-75: #f6f4f2; /* N75  */
+  --color-neutral-100: #f3f0ec; /* N100 */
+  --color-neutral-200: #eee9e4; /* N200 */
+  --color-neutral-300: #eae5df; /* N300 */
+  --color-neutral-400: #a4a09c; /* N400 */
+  --color-neutral-500: #8f8c88; /* N500 */
+
+  /* —— Browns (B50–B500) —— */
+  --color-brown-50: #f4ede7; /* B50  */
+  --color-brown-75: #d4b39c; /* B75  */
+  --color-brown-100: #c29473; /* B100 */
+  --color-brown-200: #a76537; /* B200 */
+  --color-brown-300: #95460e; /* B300 */
+  --color-brown-400: #68310a; /* B400 */
+  --color-brown-500: #5b2b09; /* B500 */
+
+  /* —— Greens (G50–G500) —— */
+  --color-green-50: #e6ebec; /* G50  */
+  --color-green-75: #97adaf; /* G75  */
+  --color-green-100: #6c8c8e; /* G100 */
+  --color-green-200: #2c5a5e; /* G200 */
+  --color-green-300: #01383d; /* G300 */
+  --color-green-400: #01272b; /* G400 */
+  --color-green-500: #012225; /* G500 */
+
+  /* —— Text —— */
+  --color-disabled-100: rgb(255, 0, 0);
+
+  --font-dm-sans: DM Sans, sans-serif;
+  --font-poppins: Poppins, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* —— Darks (D50–D500) —— */
+  --color-dark-50: #ebe9e8; /* D50  */
+  --color-dark-75: #aba3a0; /* D75  */
+  --color-dark-100: #887d79; /* D100 */
+  --color-dark-200: #55453f; /* D200 */
+  --color-dark-300: #321f18; /* D300 */
+  --color-dark-400: #231611; /* D400 */
+  --color-dark-500: #1f130f; /* D500 */
+
+  /* —— Neutrals (N50–N500) —— */
+  --color-neutral-50: #fdfcfc; /* N50  */
+  --color-neutral-75: #f6f4f2; /* N75  */
+  --color-neutral-100: #f3f0ec; /* N100 */
+  --color-neutral-200: #eee9e4; /* N200 */
+  --color-neutral-300: #eae5df; /* N300 */
+  --color-neutral-400: #a4a09c; /* N400 */
+  --color-neutral-500: #8f8c88; /* N500 */
+
+  /* —— Browns (B50–B500) —— */
+  --color-brown-50: #f4ede7; /* B50  */
+  --color-brown-75: #d4b39c; /* B75  */
+  --color-brown-100: #c29473; /* B100 */
+  --color-brown-200: #a76537; /* B200 */
+  --color-brown-300: #95460e; /* B300 */
+  --color-brown-400: #68310a; /* B400 */
+  --color-brown-500: #5b2b09; /* B500 */
+
+  /* —— Greens (G50–G500) —— */
+  --color-green-50: #e6ebec; /* G50  */
+  --color-green-75: #97adaf; /* G75  */
+  --color-green-100: #6c8c8e; /* G100 */
+  --color-green-200: #2c5a5e; /* G200 */
+  --color-green-300: #01383d; /* G300 */
+  --color-green-400: #01272b; /* G400 */
+  --color-green-500: #012225; /* G500 */
+
+  /* —— Text —— */
+  --color-disabled: rgba(115, 115, 115, 0.7);
+
+  --font-dm-sans: var(--font-dm-sans);
+  --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* page bg / fg */
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
+
+    /* —— Darks (D50–D500) —— */
+    --color-dark-50: #ebe9e8; /* D50  */
+    --color-dark-75: #aba3a0; /* D75  */
+    --color-dark-100: #887d79; /* D100 */
+    --color-dark-200: #55453f; /* D200 */
+    --color-dark-300: #321f18; /* D300 */
+    --color-dark-400: #231611; /* D400 */
+    --color-dark-500: #1f130f; /* D500 */
+
+    /* —— Neutrals (N50–N500) —— */
+    --color-neutral-50: #fdfcfc; /* N50  */
+    --color-neutral-75: #f6f4f2; /* N75  */
+    --color-neutral-100: #f3f0ec; /* N100 */
+    --color-neutral-200: #eee9e4; /* N200 */
+    --color-neutral-300: #eae5df; /* N300 */
+    --color-neutral-400: #a4a09c; /* N400 */
+    --color-neutral-500: #8f8c88; /* N500 */
+
+    /* —— Browns (B50–B500) —— */
+    --color-brown-50: #f4ede7; /* B50  */
+    --color-brown-75: #d4b39c; /* B75  */
+    --color-brown-100: #c29473; /* B100 */
+    --color-brown-200: #a76537; /* B200 */
+    --color-brown-300: #95460e; /* B300 */
+    --color-brown-400: #68310a; /* B400 */
+    --color-brown-500: #5b2b09; /* B500 */
+
+    /* —— Greens (G50–G500) —— */
+    --color-green-50: #e6ebec; /* G50  */
+    --color-green-75: #97adaf; /* G75  */
+    --color-green-100: #6c8c8e; /* G100 */
+    --color-green-200: #2c5a5e; /* G200 */
+    --color-green-300: #01383d; /* G300 */
+    --color-green-400: #01272b; /* G400 */
+    --color-green-500: #012225; /* G500 */
+
+    /* —— Text —— */
+    --color-disabled: rgb(255, 0, 0);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-dm-sans), var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  /*- add text anti-aliasing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
