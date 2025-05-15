@@ -27,7 +27,7 @@ const Header = async (props: Props) => {
   if (!pathname) return null;
 
   return (
-    <div className="fixed top-0 right-0 left-0 z-30 flex h-16 items-center justify-between gap-4 bg-neutral-100 px-4 py-3.5 shadow-xs md:px-6 lg:justify-end">
+    <div className="sticky top-0 right-0 left-0 z-30 flex h-16 items-center justify-between gap-4 bg-neutral-100 px-4 py-3.5 shadow-xs md:px-6 lg:justify-end">
       <div className="flex items-center gap-2 lg:hidden">
         <Image
           src={nosis_logo}

@@ -100,7 +100,7 @@ const categories: Array<BookCategory> = [
 
 const CategoryPill = ({ category }: { category: BookCategory }) => {
   return (
-    <button className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-6 py-2 shadow-sm">
+    <button className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-6 py-2 shadow-sm transition-shadow hover:bg-white/80 hover:shadow-md">
       <Image
         src={category.icon}
         alt={category.label}

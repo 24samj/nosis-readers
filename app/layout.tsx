@@ -24,7 +24,7 @@ export default function RootLayout({
           <Navbar />
           <div className="flex w-full flex-1 flex-col overflow-hidden">
             <Header />
-            <main className="bg-brown-50 w-full flex-1 overflow-y-auto pb-96">
+            <main className="w-full flex-1 overflow-y-auto">
               {children}
               <FadedFooter />
             </main>

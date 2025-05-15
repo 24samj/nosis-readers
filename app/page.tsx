@@ -9,7 +9,7 @@ const Home = async (props: Props) => {
   const books = await getAllBooks();
 
   return (
-    <div className="flex flex-col gap-9 p-4 md:gap-12 md:p-6">
+    <div className="bg-brown-50 flex flex-col gap-9 p-4 md:gap-12 md:p-6">
       <BookCarousel books={books} heading="Readers' Choice" />
       <BookCategories />
       <BookMonth bookMonthBooks={books.slice(0, 2)} />

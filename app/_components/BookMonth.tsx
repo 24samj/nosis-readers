@@ -4,7 +4,9 @@ import {
   nosis_logo_bg,
   nosis_logo_bg_2,
 } from "@/assets";
+import { BookActions } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -12,35 +14,6 @@ type Props = {
 };
 
 const colors = ["rgba(218, 228, 255, 1)", "rgba(247, 229, 164, 1)"];
-
-const BookActions = () => {
-  return (
-    <div className="flex gap-2">
-      <button className="flex flex-1 items-center justify-center gap-1 rounded-lg bg-green-300 px-3 py-2 sm:px-4 md:px-10 md:py-3">
-        <Image
-          src={book_closed}
-          alt="book closed"
-          width={20}
-          height={20}
-          className="aspect-square w-4"
-        />
-        <span className="text-xs font-medium text-white md:text-sm">Read</span>
-      </button>
-      <button className="flex flex-1 items-center justify-center gap-1 rounded-lg bg-white px-3 py-2 sm:px-4 md:px-10 md:py-3">
-        <Image
-          src={bookmark}
-          alt="bookmark"
-          width={20}
-          height={20}
-          className="aspect-square w-4"
-        />
-        <span className="text-xs font-medium text-green-300 md:text-sm">
-          Bookmark
-        </span>
-      </button>
-    </div>
-  );
-};
 
 const BookTab = ({ book, index }: { book: Book; index: number }) => {
   return (
@@ -50,13 +23,18 @@ const BookTab = ({ book, index }: { book: Book; index: number }) => {
       }}
       className="relative mt-2 flex w-full gap-2 overflow-hidden rounded-lg p-3 sm:gap-4 sm:p-4 lg:mt-0 lg:flex-1"
     >
-      <Image
-        src={book.cover}
-        alt={book.title}
-        width={133}
-        height={200}
+      <Link
         className="h-40 w-24 flex-shrink-0 rounded-lg object-contain sm:h-52 sm:w-32"
-      />
+        href={`/books/${book.id}`}
+      >
+        <Image
+          src={book.cover}
+          alt={book.title}
+          width={133}
+          height={200}
+          className="h-40 w-24 flex-shrink-0 rounded-lg object-contain sm:h-52 sm:w-32"
+        />
+      </Link>
       <div className="relative z-20 flex flex-col justify-between">
         <h3 className="line-clamp-2 text-base font-semibold sm:text-lg">
           {book.title}
@@ -65,7 +43,7 @@ const BookTab = ({ book, index }: { book: Book; index: number }) => {
           {book.author.name}
         </span>
         <span className="text-xs sm:text-sm">0 mins</span>
-        <BookActions />
+        <BookActions type="bookMonth" />
         <p className="text-disabled invisible line-clamp-2 text-xs sm:text-sm md:visible md:max-w-80">
           {book.description}
         </p>

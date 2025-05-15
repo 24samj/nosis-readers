@@ -27,13 +27,15 @@ const BookDetailsPage = async ({ params }: Props) => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between px-4 py-6 md:px-8">
+      <div className="bg-brown-50 flex justify-between px-4 py-6 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-1 rounded-lg py-2 transition-all hover:shadow-sm md:bg-white md:px-4"
+          className="group flex items-center gap-1 rounded-lg py-2 transition-all hover:shadow-sm md:bg-white md:px-4"
         >
-          <ChevronLeft className="aspect-square w-4" />
-          <span className="text-disabled text-sm font-medium">Back</span>
+          <ChevronLeft className="text-disabled aspect-square w-4 transition-all group-hover:text-black" />
+          <span className="text-disabled text-sm font-medium transition-all group-hover:text-black">
+            Back
+          </span>
         </Link>
         <BookOptions />
       </div>

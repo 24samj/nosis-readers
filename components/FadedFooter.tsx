@@ -1,10 +1,19 @@
+import clsx from "clsx";
+import { headers } from "next/headers";
 import React from "react";
 
 type Props = {};
 
-const FadedFooter = (props: Props) => {
+const FadedFooter = async (props: Props) => {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+
   return (
-    <div className="px-6">
+    <div
+      className={clsx("px-6 pb-96", {
+        "bg-brown-50": pathname === "/",
+      })}
+    >
       <p className="text-dark-75 text-[2.5rem] font-bold">
         next gen.,
         <br /> library.

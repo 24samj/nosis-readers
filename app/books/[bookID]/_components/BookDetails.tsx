@@ -8,7 +8,7 @@ type Props = {
 
 const BookDetails = ({ book }: Props) => {
   return (
-    <div className="book-details flex flex-col items-center gap-4 pb-8 md:flex-row md:items-start md:gap-8 md:pl-8">
+    <div className="book-details bg-brown-50 flex flex-col items-center gap-4 pb-8 md:flex-row md:items-start md:gap-8 md:pl-8">
       <Image
         src={book.cover}
         alt={book.title}
@@ -36,7 +36,7 @@ const BookDetails = ({ book }: Props) => {
             </span>
           ))}
         </div>
-        <BookActions />
+        <BookActions type="bookDetails" />
       </div>
     </div>
   );
