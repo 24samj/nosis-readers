@@ -45,14 +45,17 @@ function BookContents({ contents }: Props) {
       <h3 className="text-2xl font-semibold">Contents</h3>
       <div className="grid divide-y divide-gray-200">
         {contents.map((content) => (
-          <div key={content} className="flex items-center gap-3 px-4 py-2.5">
+          <div
+            key={content}
+            className="group flex items-center gap-3 px-4 py-2.5 transition-all hover:bg-green-50/25 hover:pl-6"
+          >
             <span className="text-lg font-medium text-green-300">
               Part {toRomanNumeral(contents.indexOf(content) + 1)}
             </span>
             <span className="flex-1 text-lg font-medium text-gray-700">
               {content}
             </span>
-            <ChevronRight className="aspect-square w-5" />
+            <ChevronRight className="aspect-square w-5 transition-all group-hover:-mr-2" />
           </div>
         ))}
       </div>
