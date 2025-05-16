@@ -17,7 +17,7 @@ const BookCard = ({ book }: Props) => {
   return (
     <Link
       href={`/books/${id}`}
-      className="group flex min-w-[9rem] snap-start flex-col gap-3 pt-2 md:min-w-[13rem]"
+      className="group flex min-w-36 snap-start flex-col gap-3 pt-2 md:min-w-52"
     >
       <Image
         src={cover}

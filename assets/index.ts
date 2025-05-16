@@ -10,6 +10,7 @@ export { default as gift } from "./icons/gift.svg";
 export { default as instagram } from "./icons/instagram.svg";
 export { default as twitter } from "./icons/twitter.svg";
 export { default as facebook } from "./icons/facebook.svg";
+export { default as clock } from "./icons/clock.svg";
 
 export { default as startup_entrepreneurship } from "./icons/startup-entrepreneurship.svg";
 export { default as cloud } from "./icons/cloud.svg";

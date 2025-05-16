@@ -1,7 +1,7 @@
 import { addBook, getAllBooks } from "@/lib/firebase";
 import React from "react";
 import { BookCategories, BookMonth } from "./_components";
-import { BookCarousel } from "@/components";
+import { BookCarousel, ContinueReading } from "@/components";
 
 type Props = {};
 
@@ -10,6 +10,7 @@ const Home = async (props: Props) => {
 
   return (
     <div className="bg-brown-50 flex flex-col gap-9 p-4 md:gap-12 md:p-6">
+      <ContinueReading books={books} />
       <BookCarousel books={books} heading="Readers' Choice" />
       <BookCategories />
       <BookMonth bookMonthBooks={books.slice(0, 2)} />
