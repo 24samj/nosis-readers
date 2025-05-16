@@ -1,3 +1,5 @@
+"use client";
+
 import {
   about_us,
   circle_help,
@@ -13,9 +15,9 @@ import {
   twitter,
 } from "@/assets";
 import clsx from "clsx";
-import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 type Props = {};
@@ -74,9 +76,8 @@ const socialOptions = [
   },
 ];
 
-const Navbar = async (props: Props) => {
-  const headerList = headers();
-  const pathname = (await headerList).get("x-current-path");
+const Navbar = (props: Props) => {
+  const pathname = usePathname();
 
   return (
     <nav

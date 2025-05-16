@@ -1,12 +1,13 @@
+"use client";
+
 import clsx from "clsx";
-import { headers } from "next/headers";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 type Props = {};
 
-const FadedFooter = async (props: Props) => {
-  const headerList = headers();
-  const pathname = (await headerList).get("x-current-path");
+const FadedFooter = (props: Props) => {
+  const pathname = usePathname();
 
   return (
     <div
