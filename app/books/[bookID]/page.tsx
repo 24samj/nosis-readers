@@ -1,7 +1,5 @@
-import { book_closed, bookmark, three_dot_menu } from "@/assets";
 import { getBook } from "@/lib/firebase";
-import { ChevronLeft, Menu } from "lucide-react";
-import Image from "next/image";
+import { ChevronLeft } from "lucide-react";
 import React from "react";
 import {
   BookAuthorDetails,

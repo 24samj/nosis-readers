@@ -1,4 +1,4 @@
-import { addBook, getAllBooks } from "@/lib/firebase";
+import { getAllBooks } from "@/lib/firebase";
 import React from "react";
 import { BookCategories, BookMonth } from "./_components";
 import { BookCarousel, ContinueReading } from "@/components";
