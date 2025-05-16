@@ -93,13 +93,13 @@ const Navbar = (props: Props) => {
       )}
     >
       {/* Logo - Only visible on desktop */}
-      <div className="mx-auto hidden h-8 max-w-24 items-center gap-2 lg:flex">
+      <div className="mx-auto hidden h-8 items-center gap-2 lg:flex">
         <Image
           src={nosis_logo}
           alt="nosis logo"
           width={200}
           height={50}
-          className="aspect-square"
+          className="aspect-square w-12"
         />
         <Image
           src={nosis_logo_text}
