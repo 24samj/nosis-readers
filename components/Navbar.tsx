@@ -7,6 +7,8 @@ import {
   instagram,
   library,
   my_account,
+  nosis_logo,
+  nosis_logo_text,
   search,
   twitter,
 } from "@/assets";
@@ -90,10 +92,25 @@ const Navbar = async (props: Props) => {
       )}
     >
       {/* Logo - Only visible on desktop */}
-      <div className="hidden lg:block">{/* Your logo here */}</div>
+      <div className="mx-auto hidden h-8 max-w-24 items-center gap-2 lg:flex">
+        <Image
+          src={nosis_logo}
+          alt="nosis logo"
+          width={200}
+          height={50}
+          className="aspect-square"
+        />
+        <Image
+          src={nosis_logo_text}
+          alt="nosis logo text"
+          width={200}
+          height={50}
+          className="w-full"
+        />
+      </div>
 
       {/* Main Options - Always visible */}
-      <div className="flex w-full flex-row justify-around lg:flex-1 lg:flex-col lg:justify-start lg:gap-2">
+      <div className="flex w-full flex-row justify-around lg:flex-1 lg:flex-col lg:justify-start lg:gap-2 lg:pt-4">
         {options.map((option) => (
           <Link
             key={option.name}

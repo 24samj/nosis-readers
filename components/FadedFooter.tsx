@@ -10,8 +10,9 @@ const FadedFooter = async (props: Props) => {
 
   return (
     <div
-      className={clsx("px-6 pb-96", {
-        "bg-brown-50": pathname === "/",
+      className={clsx("px-6", {
+        "bg-brown-50 pb-96": pathname === "/",
+        "pb-24": pathname !== "/",
       })}
     >
       <p className="text-dark-75 text-[2.5rem] font-bold">

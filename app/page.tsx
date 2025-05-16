@@ -15,6 +15,8 @@ const Home = async (props: Props) => {
       <BookCategories />
       <BookMonth bookMonthBooks={books.slice(0, 2)} />
       <BookCarousel books={books} heading="Featured Books" />
+      {/* Curated Pathways Section */}
+      {/* Reading Journey Section */}
     </div>
   );
 };

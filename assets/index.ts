@@ -1,4 +1,6 @@
 /*------------ Icons ------------*/
+export { default as nosis_logo_text } from "./icons/nosis-logo-text.svg";
+
 export { default as three_dot_menu } from "./icons/three-dot-menu.svg";
 export { default as home } from "./icons/home.svg";
 export { default as search } from "./icons/search.svg";
